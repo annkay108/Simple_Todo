@@ -1,9 +1,14 @@
 import React from "react";
 import AddTodo from "./AddTodo";
-
+import TodoList from "../containers/VisibleTodoList";
+import Footer from "./Footer"
 const App =()=>{
     return(
-        <AddTodo/>
+        <div>
+            <AddTodo/>
+            <TodoList/>
+            <Footer/>
+        </div>
     )
 }
 

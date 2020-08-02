@@ -1,9 +1,8 @@
 import React from 'react';
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addTodo } from "../actions"
 
 function AddTodo() {
-    const todoList = useSelector(state => state)
     const dispatch = useDispatch();
     let input
     const handleOnSubmit =(e)=>{
@@ -19,10 +18,6 @@ function AddTodo() {
                 <button type="submit">Add Todo</button>
             </form>
             <h1>Todo List</h1>
-            {todoList.map(el => 
-                <div key={el.id}>
-                    {el.text}
-                </div>)}
         </div>
     )
 }
